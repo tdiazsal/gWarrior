@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.pixelcol_skel"
+      android:versionCode="1"
+      android:versionName="1.0">
+
+<uses-sdk android:minSdkVersion="8" />
+
+ <!-- AFEGIM AQUESTA LINIA D'AQUI ABAIX PER TEMES DE PERMISOS  -->
+<uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+    
+       <!--  AQUI DEFINIM QUINA ES LA CLASSE A CRIDAR INICIALMENT  -->
+        <activity android:name="com.main.gameSplash" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" /> 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+       <activity android:name="com.main.main" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        
+    </application>
+    
+</manifest>
